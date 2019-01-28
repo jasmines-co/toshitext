@@ -2,12 +2,13 @@
 Initial API documentation. 
 
 ### Function stubs
-
++ ``` help() ```
 + ``` getUserById() ```
 + ``` getUserByAddress() ```
 + ``` getUserByPhone() ``` 
 + ``` getPhoneNumberForUser() ```
 + ``` checkIfPhoneNumberExists() ```
++ ``` getExchangeRate() ``` 
 + ``` enable2FA() ```
 + ``` request2FA() ```
 + ``` check2FA() ```
