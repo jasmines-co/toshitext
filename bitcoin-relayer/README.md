@@ -7,6 +7,7 @@ Our Bitcoin relayer consists of an Apache Kafka server which serves as the centr
 + [Redis](https://redis.io/)
 + [Hashicorp Vault](https://www.vaultproject.io/)
 + [Twilio](https://www.twilio.com/)
++ [Docker](https://www.docker.com/)
 + [Heroku](https://www.heroku.com/)
 
 ## Instructions 
