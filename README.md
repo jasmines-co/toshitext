@@ -1,3 +1,2 @@
 # toshi-text
-Send Bitcoin with a text message.
-test
+Send BTC with a text message.
