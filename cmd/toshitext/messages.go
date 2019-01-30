@@ -1,5 +1,7 @@
 package toshitext
 
+import "fmt"
+
 type Message struct {
 	ID          int
 	Recipient   string
@@ -10,4 +12,13 @@ type Message struct {
 	LastName    string
 	Country     string
 	Sender      string
+}
+
+func sendMessage(message string, sender string, recipient string, spam bool) {
+	m := Message{Message: message, Sender: sender, Recipient: recipient, Spam: spam}
+	fmt.Println(m.Message, m.Sender, m.Recipient, m.Spam)
+}
+
+func main() {
+
 }

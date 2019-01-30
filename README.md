@@ -1,5 +1,8 @@
 # ToshiText
-Send BTC with a text message. 
+Send BTC with a text message.
+
+## SMS Specification by the IETF
+[https://www.ietf.org/rfc/rfc5724.txt](https://www.ietf.org/rfc/rfc5724.txt)
 
 ## Standard Go Project Layout
 
