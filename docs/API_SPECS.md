@@ -3,6 +3,7 @@ Initial API documentation.
 
 ### Function stubs
 + ``` help() ```
++ ``` createAccount() ```
 + ``` getUserById() ```
 + ``` getUserByAddress() ```
 + ``` getUserByPhone() ``` 

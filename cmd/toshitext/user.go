@@ -1,5 +1,7 @@
 package toshitext
 
+import "fmt"
+
 type User struct {
 	ID         int
 	Username   string
@@ -8,4 +10,9 @@ type User struct {
 	Status     string
 	Balance    string
 	BTCAddress string
+}
+
+func createAccount(firstName string, lastName string) {
+	m := Message{Message: message, Sender: sender, Recipient: recipient, Spam: spam}
+	fmt.Println(m.Message, m.Sender, m.Recipient, m.Spam)
 }

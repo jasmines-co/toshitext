@@ -1,4 +1,4 @@
-package toshitext
+package main
 
 import "fmt"
 
@@ -20,5 +20,5 @@ func sendMessage(message string, sender string, recipient string, spam bool) {
 }
 
 func main() {
-
+	fmt.Println(m.Message, m.Sender, m.Recipient, m.Spam)
 }
