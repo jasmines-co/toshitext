@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# toshi-text
-Send BTC with a text message.
-=======
 # ToshiText
 Send BTC with a text message.
 
