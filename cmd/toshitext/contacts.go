@@ -1,4 +1,4 @@
-package toshitext
+package main
 
 type Contact struct {
 	ID        int
@@ -6,4 +6,8 @@ type Contact struct {
 	FirstName string
 	LastName  string
 	Country   string
+}
+
+func main() {
+
 }

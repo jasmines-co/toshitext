@@ -12,13 +12,14 @@ type Message struct {
 	LastName    string
 	Country     string
 	Sender      string
+	Spam        bool
 }
 
-func sendMessage(message string, sender string, recipient string, spam bool) {
-	m := Message{Message: message, Sender: sender, Recipient: recipient, Spam: spam}
-	fmt.Println(m.Message, m.Sender, m.Recipient, m.Spam)
+func sendMessage(text string, sender string, recipient string, spam bool) {
+	m := Message{Text: text, Sender: sender, Recipient: recipient, Spam: spam}
+	fmt.Println(m.Text, m.Sender, m.Recipient, m.Spam)
 }
 
 func main() {
-	fmt.Println(m.Message, m.Sender, m.Recipient, m.Spam)
+	fmt.Println("sup yo!", "me", "you", true)
 }

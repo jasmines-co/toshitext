@@ -1,4 +1,4 @@
-package toshitext
+package main
 
 type Numbers struct {
 	ID      int
@@ -6,4 +6,8 @@ type Numbers struct {
 	Phone   string
 	Country *Country
 	Status  string
+}
+
+func main() {
+
 }

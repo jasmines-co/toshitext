@@ -1,4 +1,4 @@
-package toshitext
+package main
 
 import "fmt"
 

@@ -1,1 +1,5 @@
-package toshitext
+package main
+
+func main() {
+
+}
