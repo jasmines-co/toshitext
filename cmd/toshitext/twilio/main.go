@@ -3,24 +3,15 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"math/rand"
 	"net/http"
 	"net/url"
 	"os"
 	"strings"
 	"time"
-
-	"github.com/joho/godotenv"
 )
 
 func main() {
-
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-
 	// Set account keys and information
 	// Set up Env viriable to hide credentials
 	accountSid := os.Getenv("ACCOUNT_SID")
