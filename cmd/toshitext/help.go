@@ -4,6 +4,6 @@ type Help struct {
 	ID int
 }
 
-func main() {
+func notmain() {
 
 }

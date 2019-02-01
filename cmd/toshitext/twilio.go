@@ -15,7 +15,6 @@ import (
 )
 
 func main() {
-
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
@@ -41,8 +40,8 @@ func main() {
 	}
 
 	msgData := url.Values{}
-	msgData.Set("To", "+16285023462")
-	msgData.Set("From", "+4152002312")
+	msgData.Set("To", "+1")
+	msgData.Set("From", "+1")
 	msgData.Set("Body", messages[rand.Intn(len(messages))])
 	msgDataReader := *strings.NewReader(msgData.Encode())
 
@@ -52,7 +51,7 @@ func main() {
 	req, _ := http.NewRequest("POST", urlStr, &msgDataReader)
 	req.SetBasicAuth(accountSid, authToken)
 	req.Header.Add("Accept", "application/json")
-	req.Header.Add("Conten-Type", "application/x-www.-form-urlencoded")
+	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
 	resp, _ := client.Do(req)
 	if resp.StatusCode >= 200 && resp.StatusCode < 300 {

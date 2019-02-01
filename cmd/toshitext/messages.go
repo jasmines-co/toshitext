@@ -19,7 +19,3 @@ func sendMessage(text string, sender string, recipient string, spam bool) {
 	m := Message{Text: text, Sender: sender, Recipient: recipient, Spam: spam}
 	fmt.Println(m.Text, m.Sender, m.Recipient, m.Spam)
 }
-
-func main() {
-	fmt.Println("sup yo!", "me", "you", true)
-}

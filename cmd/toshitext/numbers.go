@@ -4,10 +4,6 @@ type Numbers struct {
 	ID      int
 	User    *User
 	Phone   string
-	Country *Country
+	Country interface{}
 	Status  string
-}
-
-func main() {
-
 }

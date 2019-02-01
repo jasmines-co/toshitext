@@ -7,7 +7,3 @@ type Contact struct {
 	LastName  string
 	Country   string
 }
-
-func main() {
-
-}

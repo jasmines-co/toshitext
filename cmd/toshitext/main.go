@@ -4,6 +4,6 @@ import (
 	"fmt"
 )
 
-func main() {
+func maintwo() {
 	fmt.Println("ToshiText Backend Api vAlpha")
 }
