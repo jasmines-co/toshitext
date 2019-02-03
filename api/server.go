@@ -10,20 +10,18 @@ import (
 	"github.com/labstack/echo/middleware"
 )
 
-type CryptoRates struct {
-	Name  string `json:name`
-	Unit  string `json:unit`
-	Value string `json:value`
-	Type  string `json:value`
+type CoinGecko struct {
+	Rates struct {
+		Name  string `json:name`
+		Unit  string `json:unit`
+		Value string `json:value`
+		Type  string `json:value`
+	}
 }
 
 type Wallet struct {
 	Address string `json:address`
 	Token   string `json:token`
-}
-
-type CoinGecko struct {
-	Rate CryptoRates
 }
 
 func renderHome(c echo.Context) error {
@@ -102,7 +100,7 @@ func main() {
 
 	e.GET("/", renderHome)
 	e.POST("/wallets", createWallet)
-	e.GET("/bitcoin-price", getBitcoinPrice)
+	e.GET("/rates", getBitcoinPrice)
 
 	e.Start(":8000")
 }
