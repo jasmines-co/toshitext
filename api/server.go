@@ -10,9 +10,20 @@ import (
 	"github.com/labstack/echo/middleware"
 )
 
+type CryptoRates struct {
+	Name  string `json:name`
+	Unit  string `json:unit`
+	Value string `json:value`
+	Type  string `json:value`
+}
+
 type Wallet struct {
 	Address string `json:address`
 	Token   string `json:token`
+}
+
+type CoinGecko struct {
+	Rate CryptoRates
 }
 
 func renderHome(c echo.Context) error {
@@ -33,6 +44,42 @@ func createWallet(c echo.Context) error {
 	return c.String(http.StatusOK, "New crypto wallet created!")
 }
 
+func getBitcoinPrice(c echo.Context) error {
+	rates := CoinGecko{}
+
+	// Build the request
+	req, err := http.NewRequest("GET", "https://api.coingecko.com/api/v3/exchange_rates", nil)
+	if err != nil {
+		fmt.Println("Error requesting API endpoint: ", err)
+	}
+
+	// create a Client
+	client := &http.Client{}
+
+	// Do sends an HTTP request and
+	response, err := client.Do(req)
+	if err != nil {
+		fmt.Println("Error getting bitcoin price: ", err)
+	}
+
+	// Defer the closing of the body
+	defer response.Body.Close()
+
+	// Use json.Decode for reading streams of JSON data
+	// err := json.NewDecoder(response.Body).Decode(&employee)
+	// if err != nil {
+	// 	log.Printf("Failed processing createWallet request: %s", err)
+	// 	return echo.NewHTTPError(http.StatusInternalServerError)
+	// }
+
+	// // Use json.Decode for reading streams of JSON data
+	if error := json.NewDecoder(response.Body).Decode(&rates); error != nil {
+		fmt.Println(error)
+	}
+
+	return c.JSON(http.StatusOK, rates)
+}
+
 ////////////////////////// Middlewares ////////////////////////////
 
 func main() {
@@ -40,7 +87,11 @@ func main() {
 
 	e := echo.New()
 
-	// e.Use(ServerHeader)
+	// Cors
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"*"},
+		AllowMethods: []string{echo.GET, echo.HEAD, echo.PUT, echo.POST, echo.DELETE},
+	}))
 
 	g := e.Group("/")
 
@@ -51,6 +102,7 @@ func main() {
 
 	e.GET("/", renderHome)
 	e.POST("/wallets", createWallet)
+	e.GET("/bitcoin-price", getBitcoinPrice)
 
 	e.Start(":8000")
 }
