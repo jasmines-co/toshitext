@@ -91,7 +91,7 @@ func main() {
 		AllowMethods: []string{echo.GET, echo.HEAD, echo.PUT, echo.POST, echo.DELETE},
 	}))
 
-	g := e.Group("/")
+	g := e.Group("/admin")
 
 	// Log the server interaction
 	g.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
