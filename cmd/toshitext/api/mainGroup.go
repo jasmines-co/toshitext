@@ -1,4 +1,4 @@
-package router
+package api
 
 import (
 	handlers "github.com/jasmines-co/toshitext/cmd/toshitext/handlers"
