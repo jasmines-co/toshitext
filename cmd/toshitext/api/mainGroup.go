@@ -1,7 +1,7 @@
-package api
+package router
 
 import (
-	"projects/echo-server-template/api/handlers"
+	handlers "github.com/jasmines-co/toshitext/cmd/toshitext/handlers"
 
 	"github.com/labstack/echo"
 )
