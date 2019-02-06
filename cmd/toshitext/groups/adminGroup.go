@@ -1,4 +1,4 @@
-package api
+package groups
 
 import (
 	handlers "github.com/jasmines-co/toshitext/cmd/toshitext/handlers"
