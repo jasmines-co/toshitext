@@ -10,6 +10,6 @@ type Help struct {
 	ID int
 }
 
-func GetMainAdmin(c echo.Context) error {
+func GetHelp(c echo.Context) error {
 	return c.String(http.StatusOK, "Text HELP to get list of commands")
 }

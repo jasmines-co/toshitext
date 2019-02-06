@@ -10,7 +10,7 @@ type PhoneNumber struct {
 	ID      int
 	User    *User
 	Phone   string
-	Country *Country
+	Country string
 	Status  string
 }
 
