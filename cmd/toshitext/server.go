@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Live from the server...")
+	fmt.Println("Toshitext vAlpha - Send crypto with a text message.")
 
 	e := router.New()
 

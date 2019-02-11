@@ -7,5 +7,5 @@ import (
 )
 
 func RenderHome(c echo.Context) error {
-	return c.String(http.StatusOK, "Server over here!")
+	return c.String(http.StatusOK, "Toshitext - Send crypto with a text message.")
 }
