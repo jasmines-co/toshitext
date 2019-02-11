@@ -9,4 +9,5 @@ import (
 func MainGroup(e *echo.Echo) {
 	e.GET("/home", handlers.RenderHome)
 	e.POST("/wallets", handlers.CreateWallet)
+	e.GET("/replies", handlers.ReplyToMessage)
 }
